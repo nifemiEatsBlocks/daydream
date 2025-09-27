@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0kjb1rsbmrkd"]
+
+[ext_resource type="PackedScene" uid="uid://doht68giji66r" path="res://Horizontal.tscn" id="1_7jpet"]
+
+[sub_resource type="Curve2D" id="Curve2D_prmnj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2, 7, 0, 0, 0, 0, 5, -750)
+}
+point_count = 2
+
+[node name="Horipath" type="Path2D"]
+curve = SubResource("Curve2D_prmnj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(2, 7)
+rotation = -1.5668334
+rotates = false
+loop = false
+
+[node name="Horizontal" parent="PathFollow2D" instance=ExtResource("1_7jpet")]
+rotation = 1.5707964
+sync_to_physics = false
